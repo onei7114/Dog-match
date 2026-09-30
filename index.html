@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dog Match helps you discover the perfect breed match." />
+  <title>Dog Match | Find your perfect match</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Dog Match home">
+      <span class="brand-mark">✦</span>
+      <span>dog<span>match</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a class="active" href="#discover">Discover</a>
+      <a href="#popular">Popular breeds</a>
+      <a href="#how-it-works">How it works</a>
+    </nav>
+    <button class="icon-button" type="button" aria-label="Open saved breeds"><span>♡</span><i></i></button>
+  </header>
+
+  <main id="top">
+    <section class="hero" id="discover">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> Find your kindred canine</p>
+        <h1>Every dog has<br /><em>a story.</em><br />Let's find yours.</h1>
+        <p class="hero-intro">Upload a photo and we'll sniff out the breed, personality, and little details that make them special.</p>
+        <div class="trust-row"><span class="avatar-stack"><img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=80&q=80" alt=""><img src="https://images.unsplash.com/photo-1558788353-f76d92427f16?w=80&q=80" alt=""><img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=80&q=80" alt=""></span><span><strong>12,400+</strong> curious dog people</span></div>
+      </div>
+
+      <div class="upload-card" id="uploadCard">
+        <div class="upload-card-top"><span class="step-label">01 / UPLOAD A PHOTO</span><span class="sparkle">✦</span></div>
+        <div class="drop-zone" id="dropZone" tabindex="0" role="button" aria-label="Upload a dog photo" aria-describedby="uploadRules">
+          <div class="upload-icon"><span>↑</span></div>
+          <h2>Drop your pup here</h2>
+          <p>or <button class="browse-button" id="browseButton" type="button" aria-label="Browse for a dog photo">browse files</button></p>
+          <small id="uploadRules">JPG, PNG or WEBP · max 10 MB</small>
+          <input id="fileInput" type="file" accept="image/jpeg,image/png,image/webp" hidden />
+        </div>
+        <div class="upload-footer"><span>✦ Your photos stay yours</span><span>⌘ Secure & private</span></div>
+      </div>
+    </section>
+
+    <section class="result-section" aria-labelledby="result-heading">
+      <div class="section-heading"><div><p class="eyebrow">Your latest match</p><h2 id="result-heading">Meet <em>Buddy</em></h2></div><button class="text-button" type="button">View all matches <span>↗</span></button></div>
+      <article class="result-card">
+        <div class="result-photo-wrap"><img id="resultPhoto" src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=1000&q=85" alt="Golden retriever named Buddy" /><span class="match-badge" id="matchBadge">Likely match</span><button class="heart-button" type="button" aria-label="Save Buddy" aria-pressed="false">♡</button></div>
+        <div class="result-content"><div class="result-title"><div><p class="eyebrow">Likely breed</p><h3 id="breedName">Golden Retriever</h3><p class="location" id="breedLocation">♡ Best known for: warm, social energy</p></div><span class="confidence" id="confidenceLabel">Likely match<br /><b>● ● ● ● ○</b></span></div><p class="result-description" id="resultDescription">Friendly, devoted, and always ready for an adventure. Goldens are often a cheerful, social match for active homes, though every dog is an individual.</p><div class="traits"><div><span>⚡</span><b>Energy</b><strong id="energyValue">4 / 5</strong><i><u id="energyBar" style="width:80%"></u></i></div><div><span>♧</span><b>Good with kids</b><strong id="childValue">5 / 5</strong><i><u id="childBar" style="width:100%"></u></i></div><div><span>✧</span><b>Grooming</b><strong id="groomingValue">3 / 5</strong><i><u id="groomingBar" style="width:60%"></u></i></div></div><button class="primary-button" type="button" id="detailsButton">Explore Golden Retriever <span>→</span></button></div>
+      </article>
+    </section>
+
+    <section class="popular-section" id="popular" aria-labelledby="popular-heading">
+      <div class="section-heading"><div><p class="eyebrow">A little inspiration</p><h2 id="popular-heading">Popular <em>around here</em></h2></div><button class="filter-button" type="button">All breeds <span>⌄</span></button></div>
+      <div class="breed-grid">
+        <button class="breed-card" type="button" data-breed="Labrador Retriever" data-image="https://images.unsplash.com/photo-1558788353-f76d92427f16?w=800&q=85"><img src="https://images.unsplash.com/photo-1558788353-f76d92427f16?w=800&q=85" alt="Labrador Retriever" /><span class="breed-info"><b>Labrador Retriever</b><small>Playful · Loving</small></span><span class="arrow">↗</span></button>
+        <button class="breed-card" type="button" data-breed="Cavalier King Charles" data-image="https://images.unsplash.com/photo-1560807707-8cc77767d783?w=800&q=85"><img src="https://images.unsplash.com/photo-1560807707-8cc77767d783?w=800&q=85" alt="Cavalier King Charles Spaniel" /><span class="breed-info"><b>Cavalier King Charles</b><small>Gentle · Affectionate</small></span><span class="arrow">↗</span></button>
+        <button class="breed-card" type="button" data-breed="French Bulldog" data-image="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=800&q=85"><img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=800&q=85" alt="French Bulldog" /><span class="breed-info"><b>French Bulldog</b><small>Easygoing · Funny</small></span><span class="arrow">↗</span></button>
+        <button class="breed-card" type="button" data-breed="Bernese Mountain Dog" data-image="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=800&q=85"><img src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=800&q=85" alt="Bernese Mountain Dog" /><span class="breed-info"><b>Bernese Mountain Dog</b><small>Sweet · Steady</small></span><span class="arrow">↗</span></button>
+      </div>
+    </section>
+
+    <section class="how-it-works" id="how-it-works" aria-labelledby="how-it-works-heading">
+      <div class="section-heading"><div><p class="eyebrow">How it works</p><h2 id="how-it-works-heading">A quick, honest <em>match</em></h2></div></div>
+      <div class="how-grid">
+        <div><span>1</span><h3>Upload</h3><p>Drop in a dog photo or browse a file from your device.</p></div>
+        <div><span>2</span><h3>Review</h3><p>See the likely breed, confidence notes, and trait tendencies.</p></div>
+        <div><span>3</span><h3>Compare</h3><p>Save favorites and explore popular breed profiles for inspiration.</p></div>
+      </div>
+    </section>
+  </main>
+  <footer><span class="brand small"><span class="brand-mark">✦</span>dog<span>match</span></span><span>Made for the love of dogs.</span><span>© 2024 Dog Match</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite">Photo added. Your match is ready to explore.</div>
+  <script src="script.js"></script>
+</body>
+</html>
